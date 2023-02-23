@@ -2,21 +2,37 @@
 
 /**
  * times_table - prints the 9 times table, starting with 0
- * @i, @result: variable
+ * @i, @calc, @n: variable
  */
 void times_table(void)
 {
-	int i;
+	int i, n;
 
-	for (i = 0; i <= 10; i++)
+	for (n = 0; n <= 10; n++)
 	{
-		int result = i * 9;
-
-		if (result > 9)
+		for (i = 0; i <= 9; i++)
 		{
-			_putchar(result / 10 + '0');
+			int calc = n * i;
+
+			if (i == 0)
+			{
+				_putchar(calc = n * '0');
+			}
+			else if (calc < 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(calc + '0');
+			}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((calc / 10) + '0');
+				_putchar((calc % 10) + '0');
+			}
 		}
-		_putchar(result % 10 + '0');
 		_putchar('\n');
 	}
 }
