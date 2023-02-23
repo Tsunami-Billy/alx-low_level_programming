@@ -8,7 +8,7 @@ void times_table(void)
 {
 	int i, n;
 
-	for (n = 0; n <= 10; n++)
+	for (n = 0; n <= 9; n++)
 	{
 		for (i = 0; i <= 9; i++)
 		{
@@ -16,7 +16,7 @@ void times_table(void)
 
 			if (i == 0)
 			{
-				_putchar(calc = n * '0');
+				_putchar(calc + '0');
 			}
 			else if (calc < 10)
 			{
